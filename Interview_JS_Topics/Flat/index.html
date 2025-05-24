@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+
+// let arr = [1,2,3,[4,5,6,[10,11,12,[13,14,15]]],[7,8,9]];
+// console.log(arr.flat(4));
+
+let arr = [1,[2,[3,4]]];
+
+
+function flatten(arr){
+    let newArr = [];
+    arr.forEach((element)=>{
+        if(Array.isArray(element)){
+            newArr = newArr.concat(flatten(element));
+
+        }
+        else{
+            newArr.push(element);
+        }
+    });
+    return newArr;
+}
+
+console.log(flatten(arr));
+
+// dry run 
+// element=1
+// else ->newAr = [1]
+
+// element = [2,[3,4]]
+// if => [1+ 
+//     else -> [1,2]
+// ]
+
+
+
+
+</script>

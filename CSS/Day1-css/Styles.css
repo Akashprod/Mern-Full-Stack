@@ -1,0 +1,24 @@
+div{
+    background-color: aqua;
+}
+h1{
+    font-size: xx-large;
+}
+p{
+    font-size: medium;
+    color: red;
+}
+
+.unique-color{
+    color: chartreuse;
+    background-color: dimgrey;
+}
+
+#section1{
+    font-family: monospace;
+    font-size: medium;
+}
+
+*{
+    text-align: center;
+}

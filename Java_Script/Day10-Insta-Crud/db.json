@@ -1,0 +1,38 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "a title",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9SRRmhH4X5N2e4QalcoxVbzYsD44C-sQv-w&s"
+    },
+    {
+      "id": "2",
+      "title": "another title",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXJA32WU4rBpx7maglqeEtt3ot1tPIRWptxA&s"
+    },
+    {
+      "id": "3",
+      "title": "different title",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwsAn_T3aA0ZWjVoysDInUL7Aj0n3TZUamsQ&s"
+    },
+    {
+      "title": "Deleted post",
+      "id": "04fe"
+    },
+    {
+      "id": "296b",
+      "title": "my post 2",
+      "image": "https://i.ibb.co/x1KnVbd/images5.jpg"
+    },
+    {
+      "id": "b739",
+      "title": "My fav post",
+      "image": "https://i.ibb.co/4Nw8r4T/images.jpg"
+    },
+    {
+      "id": "b9bd",
+      "title": "last post",
+      "image": "https://i.ibb.co/sgz6510/images4.jpg"
+    }
+  ]
+}

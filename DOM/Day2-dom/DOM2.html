@@ -1,0 +1,206 @@
+<!-- Get Element by class
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="head1">I am h1 tag</h1>
+    <h2 class="head2">I am h2 tag</h2>
+    <p class="head2">I am p tag</p>
+    <div class="head2">I am div tag</div>
+</body>
+</html>
+
+<script>
+    let h1=document.getElementById("head1");
+    console.log(h1);
+
+    let c1=document.getElementsByClassName("head2");
+    console.log(c1);
+
+    for( let i=0;i<c1.length;i++){
+        console.log(c1[i]);
+    }
+</script> -->
+
+<!-- Get Element by Tag
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>P1</p>
+    <p>p2</p>
+    <h1>h1</h1>
+    <h2>h2</h2>
+    <h2>h22</h2>
+</body>
+</html>
+
+<script>
+    let tag=document.getElementsByTagName("p");
+    console.log(tag);
+
+    let col=document.getElementsByTagName("h1");
+    console.log(col);
+    col[0].style.color="red";
+
+    let back=document.getElementsByTagName("h2");
+    console.log(back);
+    back[1].style.backgroundColor="red";
+</script> -->
+
+<!-- Query Selector()
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>p1 tag</p>
+    <p>p2 tag</p>
+    <div id="box">div tag</div>
+    <div class="head1">div2 tag</div>
+    <h1 class="head1">h tag</h1>
+
+</body>
+</html>
+
+<script>
+    let out1=document.querySelector("#box");
+    console.log(out1);
+
+    let out2=document.querySelector(".head1");
+    console.log(out2);
+
+    let out3=document.querySelector("p");
+    console.log(out3);
+</script> -->
+
+<!-- Query Selector All()
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>p1 tag</p>
+    <p>p2 tag</p>
+    <div id="box">div tag</div>
+    <div class="head1">div2 tag</div>
+    <h1 class="head1">h tag</h1>
+
+</body>
+</html>
+
+<script>
+    let out1=document.querySelectorAll("#box");
+    console.log(out1);
+
+    let out2=document.querySelectorAll(".head1");
+    console.log(out2);
+
+    let out3=document.querySelectorAll("p");
+    console.log(out3);
+</script> -->
+
+<!-- Mouse Enter & Leave and SIngle & Double click
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height: 200px;
+            width: 200px;
+            background-color: teal;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <p>Click me here</p>
+</body>
+</html>
+
+<script>
+    let div=document.querySelector("div");
+
+    div.addEventListener("mouseenter",changeBg);
+    function changeBg() {
+        document.querySelector("div").style.backgroundColor="red";
+        document.querySelector("div").style.cursor="grab";
+    }
+
+    div.addEventListener("mouseleave",defBg);
+    function defBg(){
+        document.querySelector("div").style.backgroundColor="teal";
+    }   
+    
+    let div2=document.querySelector("p");
+
+    div2.addEventListener("click",function() {
+        document.querySelector("p").style.backgroundColor="red";
+    })
+
+    div2.addEventListener("dblclick", function() {
+        alert("Clicked me twice continuosly");
+    })
+</script> -->
+
+<!-- Event Object
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            display: flex;
+        }
+        #container>div{
+            height: 100px;
+            width: 100px;
+            padding: 10px;
+            background-color: teal;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+</body>
+</html>
+
+<script>
+   let boxes= document.querySelectorAll("#container>div");
+   boxes.forEach(function (element) {
+    element.addEventListener("click", getBoxNumber);
+
+    function getBoxNumber(){
+        console.log(event);
+        alert(event.target.innerText);
+        event.target.style.backgroundColor="red";
+    }
+   })
+</script> -->
+

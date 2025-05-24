@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark mode</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          darkMode: "class",
+        };
+      </script>
+    <style>
+        .toggle-checkbox:checked {
+          right: 0;
+          border-color: lightcoral;
+        }
+        .toggle-checkbox:checked + .toggle-label {
+          background-color: aquamarine;
+        }
+      </style>
+</head>
+<body>
+    <div class="container mx-auto mt-10 bg-white dark:bg-slate-900 rounded-xl px-6 py-8 shadow xl"
+    >
+    <h3 class="text-slate-900 dark:text-white font-medium tracking-tight">
+        loream content
+      </h3>
+      <p class="text-slate-900 dark:text-slate-400 mt-2 text-sm">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam optio
+        est alias quae molestiae, modi in sequi reiciendis fugit, aperiam ipsa
+        nemo quisquam soluta, neque architecto id repudiandae consequatur sed!
+      </p>
+
+    </div>
+
+    <div class="relative inline w-10 mr-2 ml-6 align-middle select-none transition duration 200 ease-in"
+    >
+    <input
+    type="checkbox"
+    name="toggle"
+    id="toggle"
+    class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 cursor-pointer"
+  />
+
+  <label
+  for="toggle"
+  class="toggle-label block rounded-full bg-gray-300 cursor pointer"
+>
+  this is label</label
+>
+
+    </div>
+</body>
+</html>
+
+<script>
+    document.getElementById("toggle").addEventListener("change", function () {
+      if (this.checked) {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    });
+  </script>

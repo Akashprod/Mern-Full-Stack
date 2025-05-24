@@ -1,0 +1,197 @@
+<!-- Prototipical Inheritance
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    hi
+
+</body>
+</html>
+
+<script>
+    let grandFather = {
+        name : "Raju",
+        lastName : "K",
+        DNA : "Kind",
+        bloodGroup : "A+"
+    }
+    // console.log(grandFather);
+
+    let Father = Object.create(grandFather);
+    // console.log(Father.DNA);
+    Father.name = "Babji";
+    Father.job = "Teacher";
+    // console.log(Father);
+
+   let Son = Object.create(Father);
+//    console.log(Son.bloodGroup);
+//    console.log(Son.job);
+   Son.name = "Akash";
+//    Son.job = "Developer";
+//    console.log(Son);
+//    console.log(Son.job);
+
+// console.log(Son.__proto__);
+// console.log(Son.__proto__.__proto__);
+// console.log(Son.__proto__.__proto__.__proto__);
+// console.log(Son.__proto__.__proto__.__proto__.__proto__);
+
+console.log(Son.hasOwnProperty("DNA"));
+</script> -->
+
+<!-- Set properties/methods of prototype to constructors
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    function student(firstName,lastName){
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
+    student.prototype.country = "India";
+    student.prototype.batch = "FLM";
+    student.prototype.sayHi = function(){
+        console.log("Hi");
+    };
+
+    student1 = new student("Akash","K");
+    console.log(student1);
+</script> -->
+
+<!-- setPrototypeOf():
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    function indianStudent(){
+        this.sayHi = function(){
+            console.log("Say Hi");
+        };
+    }
+
+    const indianStudent1 = new indianStudent();
+    console.log(indianStudent1);
+    indianStudent1.sayHi();
+
+    function student(firstName,lastName){
+        this.firstName = firstName;
+        this.lastName  = lastName;
+    }
+
+    const student1 = new student("Akash","K");
+    console.log(student1);
+
+    indianStudent.prototype.country = "India";
+    indianStudent.prototype.batch = "FLM";
+
+    Object.setPrototypeOf(student.prototype,indianStudent.prototype);
+    console.log(student1.country);
+    console.log(student1.batch);
+</script> -->
+
+<!-- Closures
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    function outerFunction(batch){
+        let name = "Akash";
+        return function innerFunction(){
+            console.log(name,batch);
+        };
+    }
+
+    let output = outerFunction("FLM");
+    console.log(output);
+    output();
+</script> -->
+
+<!-- Closure Example 2
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    function outerFunction(){
+        let a=0;
+        return function innerFunction(){
+            a++;
+            console.log(a);
+        }
+    }
+
+    console.log(outerFunction());
+
+    output = outerFunction();
+    console.log(output);
+
+    output();
+    
+</script> -->
+
+<!-- Destructuring assignments
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    
+    let array = [10,20];
+
+    // let a = array[0];
+    // let b = array[1];
+    // console.log(a,b);
+
+    let [a,b] = array;
+    console.log(a,b);
+    
+</script> -->

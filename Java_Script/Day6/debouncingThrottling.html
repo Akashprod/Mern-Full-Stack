@@ -1,0 +1,59 @@
+<!-- Search Engine OPtimization
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text"  id="input">
+</body>
+</html>
+
+<script>
+    let input = document.querySelector("#input");
+    input.addEventListener("keyup",function(){
+        console.log("fetching result value",event.target.value);
+    });
+</script> -->
+
+<!-- Debouncing
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text"  oninput="onSearchInput()">
+</body>
+</html>
+
+<script>
+   
+   function onSearchInput(){
+    const query = event.target.value;
+    debouncedProcessSearchQuery(query);
+   }
+
+   function debounce(func,delay){
+    let timeOutId;
+        return function (arg){
+            clearTimeout(timeOutId);
+            timeOutId = setTimeout(()=>{
+                func(arg);
+            },5000)
+        }
+   }
+
+   const debouncedProcessSearchQuery = debounce(fetchData,5000);
+
+   function fetchData(queryr){
+    console.log(`Processing search query ${queryr}`);
+   }
+</script> -->
+
+

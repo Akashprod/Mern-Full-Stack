@@ -1,0 +1,106 @@
+<!-- SIr's code
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="searchbar" placeholder="search...">
+</body>
+</html>
+
+<script>
+    document.querySelector("#searchbar").addEventListener("input",function(element){
+        debouncedThrottledSearch(element.target.value);
+    });
+
+    const throttledSearch = throttle(fetchData,5000);
+    const debouncedThrottledSearch = debounce(throttledSearch,3000);
+
+    function fetchData(query){
+        console.log(`result is ${query}`);
+    }
+
+    function debounce(fun,delay){
+        let timerId;
+        return function (arg){
+            clearTimeout(timerId);
+            timerId = setTimeout(()=>{
+                 fun(arg);
+            },delay);
+        };
+    }
+
+    function throttle(fun,interval){
+        let prevTime=0;
+        return function(arg){
+            const now = new Date().getTime();
+            if(now - prevTime > interval){
+            prevTime = now;
+
+            return fun(arg);
+        }
+        }
+        
+    }
+</script>
+
+ -->
+
+ <!-- Chat GPT's code
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+ </head>
+ <body>
+     <input type="text" id="searchbar" placeholder="search...">
+ </body>
+ </html>
+ 
+ <script>
+ 
+ let lastQuery; //written in global scope so that we can access at finalfetchData();
+ 
+ document.querySelector("#searchbar").addEventListener("input", function(element) {
+         lastQuery = element.target.value; // Update lastQuery with current input
+         throttledSearch(lastQuery); // Call the throttled search
+         debouncedThrottledSearch(); // Call the debounced final fetch
+     });
+     const throttledSearch = throttle(fetchData, 5000);
+     const debouncedThrottledSearch = debounce(finalFetchData, 3000);    
+ 
+     function fetchData(query) {
+         console.log(`Throttled result: ${query}`); // Log the result every 5 seconds
+     }
+ 
+     function finalFetchData() {
+         console.log(`Final result: ${lastQuery}`); // Log the last query when user stops typing
+     }
+ 
+     function debounce(func, delay) {
+         let timerId;
+         return function() {
+             clearTimeout(timerId);
+             timerId = setTimeout(() => {
+                 func();
+             }, delay);
+         };
+     }
+ 
+     function throttle(func, interval) {
+         let prevTime = 0;
+         return function(arg) {
+             const now = new Date().getTime();
+             if (now - prevTime > interval) {
+                 prevTime = now;
+                 return func(arg);
+             }
+         };
+     }
+ </script> -->
+ 

@@ -1,0 +1,28 @@
+.large {
+  width: 150px;
+  height: 150px;
+}
+.medium {
+  width: 100px;
+  height: 100px;
+}
+.small {
+  width: 70px;
+  height: 70px;
+}
+.red {
+  background-color: red;
+  color:white
+}
+.blue {
+  background-color: blue;
+  color:white
+}
+.teal {
+  background-color: teal;
+  color:white
+}
+.orange {
+  background-color: orange;
+  color:white
+}

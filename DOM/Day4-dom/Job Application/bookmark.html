@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .delete{
+            color: red;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="links">
+        <div><a href="./index.html">Home</a></div>
+        <div><a href="./application.html">Applied Jobs</a></div>
+        <div><a href="./bookmark.html">Bookmarks</a></div>
+      </div>
+    <h2>This is bookmarks page</h2>
+
+<table border="1">
+    <thead>
+        <tr>
+            <td>Name</td>
+            <td>Email</td>
+            <td>Role</td>
+            <td>Salary Expected</td>
+            <td>Bookmark</td>
+        </tr>
+
+    </thead>
+    <tbody>
+        <!-- data will be coming form JS -->
+    </tbody>
+</table>
+</body>
+</html>
+
+<script>
+    let markedArr = JSON.parse(localStorage.getItem("BookmarksLS"));
+
+    markedArr.forEach( function (element,index) {
+let td1=document.createElement("td");
+td1.innerText=element.name;
+let td2=document.createElement("td");
+td2.innerText=element.email;
+let td3=document.createElement("td");
+td3.innerText=element.role;
+let td4=document.createElement("td");
+td4.innerText=element.salary;
+let td5=document.createElement("td");
+td5.innerText="delete";
+td5.setAttribute("class","delete");
+td5.addEventListener("click", function(){
+    deleteFun(element,index);
+});
+
+let tr=document.createElement("tr");
+tr.append(td1,td2,td3,td4,td5);
+document.querySelector("tbody").append(tr);
+});
+
+function deleteFun(element,index){
+    markedArr.splice(index,1);
+
+    localStorage.setItem("BookmarksLS",JSON.stringify(markedArr));
+
+    window.location.reload();
+}
+</script>

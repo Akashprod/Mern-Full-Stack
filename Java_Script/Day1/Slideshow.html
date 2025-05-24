@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 500px;
+            height: 500px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="start()">Start</button>
+    <button onclick="stop()">Stop</button>
+    
+    <div id="containers">
+
+    </div>
+</body>
+</html>
+<script>
+    let i=0;
+    let id;
+    let images=[
+    "https://cdn.pixabay.com/photo/2019/05/29/14/30/cinque-terre-4237666_1280.jpg",
+    "https://cdn.pixabay.com/photo/2022/01/28/21/10/honeybee-6975865_1280.jpg",
+    "https://cdn.pixabay.com/photo/2021/10/16/05/43/love-6713977_1280.jpg",
+    "https://cdn.pixabay.com/photo/2022/01/25/12/58/conifer-6966140_1280.jpg",
+  ];
+    
+  let displayImage=document.createElement("img");
+
+  function start(){
+    id=setInterval(function (){
+        if(i==images.length){
+            i=0;
+        };
+        displayImage.src=images[i];
+        document.querySelector("#containers").append(displayImage);  
+        i++;
+    },1000);
+}
+
+function stop(){
+    clearInterval(id);
+}
+
+</script>

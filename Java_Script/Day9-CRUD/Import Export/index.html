@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <style>
+        #navbar_import{
+            display: flex;
+            justify-content: space-between;
+            background-color: black;
+            color: white;
+            padding: 10px;
+        }
+
+        #options{
+            display: flex;
+            gap: 20px;
+            position: absolute;
+            right: 30px;
+        }
+        #navbar_import a{
+            color: wheat;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="navbar"></div>
+</body>
+</html>
+
+<script type="module">
+
+    import exportedNavbar from "./component/navbar.js";
+    let navbar = document.querySelector("#navbar");
+    navbar.innerHTML = exportedNavbar();
+
+    import {even} from "./component/navbar.js";
+    even();
+   
+</script>

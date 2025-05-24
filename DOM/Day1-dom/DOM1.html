@@ -1,0 +1,261 @@
+<!-- ntro to DOM
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="myFun()">Click Me</button>
+</body>
+</html>
+
+<script>
+    var count=0;
+    function myFun(){
+        console.log("Someone clicked me");
+        count++;
+        alert(count);
+    }
+</script> -->
+
+<!-- Targetting
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="head">This is old heading</h1>
+</body>
+</html>
+
+<script>
+    // console.log(document.getElementById("head").innerText);
+    document.getElementById("head").innerText = "This is new heading";
+</script> -->
+
+<!-- Events - onclick
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="head">0</h1>
+    <button onclick="likeFun()">like</button>
+    <button onclick="unLikeFun()">Unlike</button>
+</body>
+</html>
+
+<script>
+    let likes=0;
+    function likeFun(){
+        likes++;
+        document.getElementById("head").innerText=likes;
+        alert(likes);
+    }
+    function unLikeFun(){
+        likes--;
+        document.getElementById("head").innerText=likes;
+        alert(likes);
+    }
+
+</script> -->
+
+<!-- background-color
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="flm">FLM</h1>
+    <button id="btn" onclick="completeFun()">Mark as complete</button>
+</body>
+</html>
+
+<script>
+    document.getElementById("flm").style.backgroundColor="green";
+    function completeFun(){
+        document.getElementById("btn").style.backgroundColor="red";
+        document.getElementById("btn").innerText="Completed";
+        document.getElementById("btn").style.fontSize="40px";
+        document.getElementById("btn").style.color="white";
+    }
+</script> -->
+
+<!-- Input Tag
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Name : <input id="name" type="text" placeholder="Enter Name" value="">
+    <button id="btn" onclick="submitFunction()">Submit</button>
+    <h1 id="out">Paste your name here</h1>
+</body>
+</html>
+
+<script>
+    function submitFunction(){
+        let name=document.getElementById("name").value;
+    document.getElementById("out").innerText=name;
+    }
+</script> -->
+
+<!-- select tag
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select id="sel">
+        <option value="Gender">Gender</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+    </select>
+
+    <button id="btn" onclick="genderFun()">Submit your Gender</button>
+
+    <h1 id="gen">Paste your Gender here</h1>
+</body>
+</html>
+
+<script>
+    function genderFun(){
+        let name=document.getElementById("sel").value;
+    document.getElementById("gen").innerText=name;
+    }
+</script> -->
+
+<!-- Resetting
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="fn">FirstName</h1>
+    <div id="ln">Last Name</div>
+    <p id="fl">Full Name</p>
+    <hr>
+
+    <button onclick="first()">First Name</button>
+    <button onclick="last()">Last Name</button>
+    <button onclick="full()">Full Name</button>
+    <button onclick="reset()">Reset</button>
+</body>
+</html>
+
+<script>
+    function first(){
+        document.getElementById("fn").innerText = "Akash";
+    }
+    function last(){
+        document.getElementById("ln").innerText = "K";
+    }
+    function full(){
+        document.getElementById("fl").innerText = "Akash K";
+    }
+    function reset(){
+        document.getElementById("fn").innerText = "First Name ";
+        document.getElementById("ln").innerText = "Last Name";
+        document.getElementById("fl").innerText = "Full Name ";
+    } 
+</script> -->
+
+<!-- Age Eligibility
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="age"  type="number" placeholder="Enter Age" value="">
+    <button onclick="checkAge()">Check Eligibility</button>
+    <p id="out">Show eligibilty here</p>
+</body>
+</html>
+
+<script>
+    
+    function checkAge(){
+        let name=document.getElementById("age").value;
+        if(name<18) {
+            document.getElementById("out").innerText="Not eligible";
+        }
+        else if (name==18){
+                document.getElementById("out").innerText="Just eligible";    
+            }
+            else {
+                document.getElementById("out").innerText="Eligible";    
+            }
+    }
+</script> -->
+
+<!-- Alerting
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="nam" type="text" placeholder="Enter name" value="">
+    <br>
+    <br>
+    <select name="Gender" id="gender">
+        <option value="Male">Male</option>
+    <option value="Female">Female</option>
+    <option value="NA">Not to say</option>
+    </select>
+    <br>
+    <br>
+    <input id="mail" type="mail" placeholder="Enter Email" value="">
+    <br>
+    <br>
+    <input id="mobile" type="text" placeholder="Enter mobile number" value="">
+    <br>
+    <br>
+    <hr>
+    <button onclick="showName()">Name</button>
+    <button onclick="showGender()">Gender</button>
+    <button onclick="showEmail()">Email</button>
+    <button onclick="showMobile()">Mobile</button>
+
+</body>
+</html>
+
+<script>
+    function showName(){
+        alert(document.getElementById("nam").value);
+    }
+    function showGender(){
+        alert(document.getElementById("gender").value);
+    }
+    function showEmail(){
+        alert(document.getElementById("mail").value);
+    }
+    function showMobile(){
+        alert(document.getElementById("mobile").value);
+    }
+</script> -->

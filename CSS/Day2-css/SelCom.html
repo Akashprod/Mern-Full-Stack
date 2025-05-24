@@ -1,0 +1,214 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./SelCom.css"/>
+</head>
+<body>
+    <p> this is p tag </p>
+    <h1 class="batch2">this is for class selector</h1>
+    <div class="batch2" id="id2">
+        <p>this is for id selectors</p>
+    </div>
+</body>
+</html> -->
+
+<!-- Descendant selector
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div p {
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>Para1</p>
+        <p>Para2</p>
+        <span><p>Para3</p></span>
+    </div>
+        <p>Para4</p>
+        <p>Para5</p>
+    <div>
+        <ul><p>Para6</p></ul>
+    </div>    
+</body>
+</html> -->
+
+<!-- Child Selector
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div>p {
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>Para1</p>
+        <p>Para2</p>
+        <span><p>Para3</p></span>
+    </div>
+
+        <p>Para4</p>
+        <p>Para5</p>
+    <div>
+
+        <ul><p>Para6</p></ul>
+        <p>Para7</p>
+    </div>    
+</body>
+</html> -->
+
+<!-- General Sibling Selector
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h3~p {
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <p>Para1</p>
+    <h3>Heading</h3>
+    <p>PAra2</p>
+    <p>Para3<span>Para4</span></p>
+</body>
+</html> -->
+
+<!-- Adjacent Sibling Selector
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h3+p {
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <p>Para1</p>
+    <h3>Heading</h3>
+    <p>PAra2</p>
+    <p>Para3<span>Para4</span></p>
+    <h3>Heading2</h3>
+    <p>PAra5</p>
+    <p>Para6</p>
+</body>
+</html> -->
+
+<!-- Attribute Selectors
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a[href="https://www.youtube.com/live/A1J7EZ0tpVo?si=OegDYwNlq774D0HW"]{
+            color: red;
+        }
+
+        a[target="_self"]{
+            font-size: x-large;
+        }
+    </style>
+</head>
+<body>
+    <a href="https://www.youtube.com/live/A1J7EZ0tpVo?si=OegDYwNlq774D0HW">Youtube</a>
+   
+ <a target="_self" href="https://www.youtube.com/live/A1J7EZVo?si=OegDYwNlq774D0HW">Example</a>
+<input type="submit"/>
+</body>
+</html> -->
+
+<!-- Pseudo Classes
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            background-color: aqua;
+            color: blue;
+            padding: 10px 20px 10px 20px;
+        }   
+        button:hover{
+            background-color: blue;
+            color: aqua;
+            cursor: grab;
+        }    
+        input:focus{
+            background-color: brown;
+            color: rgb(243, 237, 237);
+        }
+
+        div>p:first-child, :last-child, :nth-child(2){
+            font-size: larger;
+        }
+
+    </style>
+
+
+</head>
+<body>
+    <button>Login</button>
+    <input type="text" placeholder="Enter Name">
+
+    <div>
+        <p>P1</p>
+        <p>P2</p>
+        <p>P3</p>
+        <p>P4</p>
+        <p>P5</p>
+        <p>P6</p>
+    </div>
+</body>
+</html> -->
+
+<!-- Pseudo Elements
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    p::first-line{
+        background-color: aqua;
+        color: red;
+    }
+    p::first-letter{
+        color: black;
+    }
+    p::before{content:"AKASH" ;}
+</style>
+
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse at, eos nulla facere consequuntur assumenda numquam similique cumque sint sit asperiores eum tempora animi ab! Nihil, rem sapiente. Reprehenderit, labore.</p>
+</body>
+</html> -->

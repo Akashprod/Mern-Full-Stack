@@ -1,0 +1,15 @@
+p {
+    color: brown;
+}
+
+.batch2 {
+    font-style: italic;
+}
+
+#id2 {
+    background-color: aqua;
+}
+
+*{
+    text-align: center;
+}

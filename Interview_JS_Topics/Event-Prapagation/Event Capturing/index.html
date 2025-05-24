@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+       <div id="parent" style="background-color: lightblue; padding: 16px; margin: 10px;" >
+        parent
+        <button id="child1" style="padding: 16px; margin: 10px;">Child 1</button>
+        <button id="child2" style="padding: 16px; margin: 10px;">Child 2</button>
+
+    </div>
+</body>
+</html>
+
+<script>
+        document.getElementById("parent").addEventListener("click",function (e){
+            alert("Parent Clicked");
+            e.stopPropagation();
+        },true)
+    document.getElementById("child1").addEventListener("click",function (e){
+        alert("Child1 Clicked");
+        // e.stopPropagation();
+    })
+    document.getElementById("child2").addEventListener("click",function (){alert("Child2 Clicked");})
+</script>

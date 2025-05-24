@@ -1,0 +1,64 @@
+#post{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    justify-content: center;
+    margin: auto;
+    border: 1px solid black;
+}
+#post img{
+    width: 100%;
+}
+
+#post div{
+    width: 450px;
+    margin: 3%;
+
+}
+
+#navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#navbar div{
+  
+    display: flex;
+    justify-content: center;
+}
+
+#logo{
+    flex: 2;
+    display: flex;
+    justify-content: center;
+}
+
+#logo img{
+    width: 15%;
+}
+
+#search{
+    flex: 2;
+}
+#options{
+    flex: 3;
+    display: flex;
+    align-items: center;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: black;
+    color: white;
+}
+
+#divIcon{
+    display: flex;
+    justify-content: space-evenly
+}
+
+#divIcon #icons{
+   width: 30px;
+  
+}

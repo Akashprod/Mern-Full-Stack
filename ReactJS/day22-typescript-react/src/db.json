@@ -1,0 +1,49 @@
+{
+  "todos": [
+    {
+      "id": "1",
+      "title": "HTML",
+      "status": false
+    },
+    {
+      "id": "36a8",
+      "title": "CSS",
+      "status": false
+    },
+    {
+      "id": "eed9",
+      "title": "React",
+      "status": true
+    },
+    {
+      "id": "60ca",
+      "title": "JS",
+      "status": false
+    },
+    {
+      "id": "688f",
+      "title": "JS",
+      "status": false
+    },
+    {
+      "id": "53fc",
+      "title": "JS",
+      "status": false
+    },
+    {
+      "id": "dcf5",
+      "title": "ds",
+      "status": false
+    },
+    {
+      "id": "ac23",
+      "title": "new",
+      "status": false
+    },
+    {
+      "id": "a86f",
+      "title": "new 2",
+      "status": false
+    }
+  ]
+}

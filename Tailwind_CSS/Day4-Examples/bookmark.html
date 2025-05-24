@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+
+    <!-- Header -->
+    <div
+      class="flex items-center justify-between space-x-20 space-y-0 my-6 p-6"
+    >
+      <div class="z-30">
+        <img id="logo" src="./images/logo-bookmark.svg" alt="" />
+      </div>
+      <div
+        class="sm:hidden md:flex items-center space-x-10 text-grayishBlue uppercase"
+      >
+        <a class="tracking-wider hover:text-softRed" href="#Features">FEATURES</a>
+        <a class="tracking-wider hover:text-softRed" href="#DOWNLOAD">DOWNLOAD</a>
+        <a class="tracking-wider hover:text-softRed" href="#FAQ">FAQ's</a>
+        <a
+          href="#"
+          class="text-white bg-softRed rounded-md px-8 py-2 shadow-md hover:bg-white hover:text-softRed"
+          >LOGIN</a
+        >
+      </div>
+      <button
+        id="menu-btn"
+        class="z-30 sm:block md:hidden focus:outline-none hamburger"
+      >
+        hamburger
+        <span class="hamburger-top"></span>
+        <span class="hamburger-middle"></span>
+        <span class="hamburger-bottom"></span>
+      </button>
+    </div>
+
+    <!-- Intro -->
+    <div class="flex flex-col-reverse md:flex md:flex-row">
+      <div class="type1 flex flex-col m-4 md:w-1/2 space-y-5 md:space-y-8">
+        <h2 class="md:text-4xl sm:text-2xl">A Simple Bookmark Manager</h2>
+        <p>
+          A clean and simple interface to organize your favorite websites. Open
+          a new browsers tab and see your sites load instantly. try it for free.
+        </p>
+        <div class="space-x-3">
+          <a class="button px-6 py-2" href="">Get it on Chrome</a>
+          <a
+            class="px-6 py-2 rounded-md bg-gray-300 border-softBlue hover:bg-softBlue hover:text-white"
+            href=""
+            >Get it on Firefox</a
+          >
+        </div>
+      </div>
+      <div class="md:w-1/2">
+        <div class="md:w-3/4 flex justify-center items-center">
+          <img src="./images/illustration-hero.svg" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Features -->
+    <div
+      class="text-center flex flex-col justify-center items-center space-y-4 my-6"
+    >
+      <h2 id="Features" class="md:text-2xl sm:text-xl">Features</h2>
+      <p class="max-w-md">
+        Our aim is to make it easy and quick to access your favorite
+        websites.Your bookmarks sync between your devices so that you can access
+        them on the go.
+      </p>
+    </div>
+
+    <!-- Tabs -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    <!-- Download matter -->
+    <div id="DOWNLOAD"
+      class="text-center flex flex-col justify-center items-center space-y-4 my-6 "
+    >
+      <h2 class="md:text-2xl sm:text-xl">Download the extension</h2>
+      <p class="max-w-md">
+        We've got more browsers in the pipeline.Please do let us know if you
+        have got your favorite browser you'd like us to prioritize.
+      </p>
+    </div>
+
+    <!-- downloads via chrome opera Firefox -->
+    <div class="flex flex-col md:flex md:flex-row md:space-y-0 md:space-x-2 space-y-5 items-center justify-center">
+      <!-- Chrome -->
+      <div class="mt-0 md:mt-0">
+        <div class="border shadow-xl sm:space-y-9 flex flex-col justify-center items-center p-6 sm:mx-10">
+          <img src="./images/logo-chrome.svg" alt="" />
+          <div class="flex flex-col justify-center items-center">
+            <h2>Add to Chrome</h2>
+            <p>Minimum version 50</p>
+          </div>
+          <img src="./images/bg-dots.svg" alt="">
+          <a class="button px-6 py-2" href="">Add & Install Extension</a>
+        </div>
+      </div>
+      <!-- Firefox -->
+      <div class="mt-0 md:mt-8">
+        <div class="border shadow-xl sm:space-y-9 flex flex-col justify-center items-center p-6 sm:mx-10">
+          <img src="./images/logo-firefox.svg" alt="" />
+          <div class="flex flex-col justify-center items-center">
+            <h2>Add to Firefox</h2>
+            <p>Minimum version 50</p>
+          </div>
+          <img src="./images/bg-dots.svg" alt="">
+          <a class="button px-6 py-2" href="">Add & Install Extension</a>
+        </div>
+      </div>
+      <!-- Opera -->
+      <div class="mt-0 md:mt-16">
+        <div class="border shadow-xl sm:space-y-9 flex flex-col justify-center items-center p-6 sm:mx-10">
+          <img src="./images/logo-opera.svg" alt="" />
+          <div class="flex flex-col justify-center items-center">
+            <h2>Add to Opera</h2>
+            <p>Minimum version 50</p>
+          </div>
+          <img src="./images/bg-dots.svg" alt="">
+          <a class="button px-6 py-2" href="">Add & Install Extension</a>
+        </div>
+      </div>
+    </div>
+    
+
+    <!-- FAQ -->
+    <div id="FAQ"
+    class="text-center flex flex-col justify-center items-center space-y-4 my-10 md:my-13"
+  >
+    <h2 class="md:text-2xl sm:text-xl">Frequently Asked Questions</h2>
+    <p class="max-w-md">
+        Here are some of our FAQ's. If you have any other questions like to be answered, Please feel free to reach us over email.
+    </p>
+  </div>
+
+  <!-- drop down -->
+<div class="flex items-center justify-center">
+  <div class="font-semibold  my-6 space-y-0 flex flex-col ">
+    <!-- <div class="border-y py-2 border-t-2">What is Bookmark?</div> -->
+
+    <!-- dropdown 1 -->
+<div class="space-y-2 max-w-md py-2 border-b">
+  <div class="flex justify-between">
+    <span>What is Bookmark?</span>
+   <button onclick="toggleInfo()">
+    
+    <svg id="arrowIcon" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+    </svg>
+   </button>
+  </div>
+
+  <div id="moreInfo" class="hidden">
+    <p>
+      A bookmark is a saved link to a specific webpage, allowing you to quickly return to it later without needing to remember or search for the URL. Bookmarks are commonly used in web browsers to store frequently visited sites or articles you'd like to revisit. They save both the page URL and often its title or a custom label you provide.
+    </p>
+  </div>
+</div>
+
+<!-- dropdown2 -->
+<div class="space-y-2 max-w-md py-2 border-b">
+  <div class="flex justify-between">
+    <span>How can I request a new browser?</span>
+   <button onclick="toggleInfoTwo()">
+    
+    <svg id="arrowIconTwo" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+    </svg>
+   </button>
+  </div>
+
+  <div id="moreInfoTwo" class="hidden">
+    <p>
+      If installation permissions are limited, you can use a portable version of a browser that doesn’t require installation. Portable apps can often run directly from a USB drive or a specific folder on your computer.    </p>
+  </div>
+</div>
+
+<!-- dropdown3 -->
+<div class="space-y-2 max-w-md py-2 border-b">
+  <div class="flex justify-between">
+    <span>Is there a mobile app?</span>
+   <button onclick="toggleInfoThree()">
+    
+    <svg id="arrowIconThree" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+    </svg>
+   </button>
+  </div>
+
+  <div id="moreInfoThree" class="hidden">
+    <p>
+      Yes, most popular web browsers have mobile app versions for both iOS and Android devices. Here are some widely used browsers and their mobile app options:    </p>
+  </div>
+</div>
+
+<!-- dropdown4 -->
+<div class="space-y-2 max-w-md py-2 border-b">
+  <div class="flex justify-between">
+    <span>What about other Chromium browsers?</span>
+   <button onclick="toggleInfoFour()">
+    
+    <svg id="arrowIconFour" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+    </svg>
+   </button>
+  </div>
+
+  <div id="moreInfoFour" class="hidden">
+    <p>
+      There are several other Chromium-based browsers that have mobile versions available, each offering unique features while using the Chromium engine. Here are some popular options:    </p>
+  </div>
+</div>
+
+<!-- extra dropdown -->
+<div class="container mx-auto mb-32">
+
+  <!-- accordion container  -->
+   <div class="max-w-2xl m-8 mx-auto overflow-hidden">
+
+    <!-- tab 1 -->
+
+      <div class="py-1 border-b outline-none group" tabindex="1">
+
+          <!-- tab flex container  -->
+           <div class="flex items-center justify-between py-3 text-gray-500 transition duration-500 cursor-pointer group ease">
+            <!-- tab title  -->
+             <div class="transition duration-500 ease group-hover:text-red-500">
+              what is Bookmark
+             </div>
+             <!-- arrow  -->
+              <div class="transition duration-500 ease group-focus:-rotate-180 ">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12"><path fill="none" stroke="#5267DF" stroke-width="3" d="M1 1l8 8 8-8"/></svg>
+              </div>
+           </div>
+            <!-- tab inner content   -->
+         <div class="overflow-hidden transition duration-500 ease group-focus:max-h-screen max-h-0">
+          <p class="py-2 text-justify text-gray-400">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga, id eaque? Modi dolores aliquid mollitia accusantium qui voluptates, sint voluptatem adipisci quaerat laudantium veniam autem neque necessitatibus maxime! Cupiditate fugiat accusamus aspernatur, aliquid vitae blanditiis, nobis beatae reiciendis ex nemo ratione earum doloremque reprehenderit veniam voluptatibus doloribus corporis aperiam molestiae!</p>
+         </div> 
+        </div>
+
+   </div>
+
+</div>
+
+    <div class="py-10 mx-auto">
+      <a class="button px-4 py-2" href="">More info</a>
+    </div>
+  </div>
+</div>
+
+
+<!-- Footer1 -->
+  <div class="bg-softBlue p-5 flex flex-col  space-y-8 justify-center items-center mt-8 ">
+  
+      <div class="space-y-8">
+        <h6 class="text-white tracking-widest text-sm flex  justify-center">35,000 + ALREADY JOINED</h6>
+        <h2 class="text-white text-xl md:text-2xl max-w-sm text-center mx-auto">Stay up-to-date with what we're doing.</h2>
+      </div>
+    <div class="flex flex-col md:flex md:flex-row space-y-8 md:space-y-0 md:space-x-2">
+      <input class="px-5 py-2 rounded-md" type="text" placeholder="Enter your email address">
+      <a class="rounded-md font-semibold text-white px-3 py-2 w-full bg-softRed text-center" href="">Contact us</a>
+  
+    </div>
+  
+</div>
+
+<!-- Footer2 -->
+<div class="bg-veryDarkBlue space-y-5 py-3 mx-auto items-center text-white flex flex-col md:flex md:flex-row md:justify-between px-5">
+
+  <div class="flex flex-col space-y-5 md:ml-10 relative font-semibold md:flex md:flex-row md:space-y-0 md:space-x-4 justify-center items-center">
+<div class="flex items-center justify-center ">
+  <img  src="./images/logo-bookmark.svg" alt="">
+  <h5 class="absolute">BOOKMARK</h5>
+</div>
+    <a href="">FEATURES</a>
+    <a href="">PRICING</a>
+    <a href="">CONTACT</a>
+  </div>
+  <div class="flex space-x-3">
+    <img src="./images/icon-facebook.svg" alt="">
+    <img src="./images/icon-twitter.svg" alt="">
+  </div>
+</div>
+
+  </body>
+</html>
+
+<script>
+
+
+
+  function showTab(tabNumber){
+    const tabs = document.querySelectorAll(".tabContent");
+    tabs.forEach(tab =>tab.classList.add("hidden"));
+    document.getElementById(`tabContent${tabNumber}`).classList.remove("hidden");
+  }
+
+  function toggleInfo(){
+    const info = document.querySelector("#moreInfo");
+    const arrowIcon = document.querySelector("#arrowIcon");
+
+    info.classList.toggle("hidden");
+    arrowIcon.classList.toggle("rotate-180");
+  }
+
+  function toggleInfoTwo(){
+    const info = document.querySelector("#moreInfoTwo");
+    const arrowIcon = document.querySelector("#arrowIconTwo");
+
+    info.classList.toggle("hidden");
+    arrowIcon.classList.toggle("rotate-180");
+  }
+
+  function toggleInfoThree(){
+    const info = document.querySelector("#moreInfoThree");
+    const arrowIcon = document.querySelector("#arrowIconThree");
+
+    info.classList.toggle("hidden");
+    arrowIcon.classList.toggle("rotate-180");
+  }
+
+  function toggleInfoFour(){
+    const info = document.querySelector("#moreInfoFour");
+    const arrowIcon = document.querySelector("#arrowIconFour");
+
+    info.classList.toggle("hidden");
+    arrowIcon.classList.toggle("rotate-180");
+  }
+</script>

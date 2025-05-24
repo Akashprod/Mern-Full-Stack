@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./app.css">
+</head>
+<body>
+    <div id="apps">
+
+        <div id="tables-section">
+            <h2>Tables</h2>
+            <input id="table-search" type="text" placeholder="search by table name" onchange="filterTable()">
+            <div id="table-container"> </div>
+        </div>
+
+        <div id="menu-section">
+            <h2>Menu</h2>
+            <input id="menu-search" type="text" placeholder="search by item name or course" onchange="filterMenu()">
+        <div id="menu-container"></div>
+        </div>
+
+    </div>
+
+    <div id="order-modal" class="modal">
+        <div class="modal-content">
+            <h3>Order Details</h3>
+            <span class="close-button">&times;</span>
+            <div id="modal-body">
+            </div>    
+        </div>
+    </div>
+</body>
+</html>
+<script src="./app.js">
+
+</script>

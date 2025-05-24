@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.hamburger{
+    cursor:pointer;
+    height:24px;
+    width:24px;
+    position:relative;
+    transistion:all 0.25s;
+},
+
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom{
+    content:"";
+    height:24px;
+    width:24px;
+    top:0px;
+    left:0px;
+    black: "#000";
+    transform: rotate(0);
+    transistion: all 0.5s;
+}
+
+.hamburger-middle {
+    tranform: translateY(7px);
+  }
+  .hamburger-bottom {
+    tranform: translateY(14px);
+  }
+
+  @layer base{
+    h2{
+      @apply font-semibold font-Sans 
+    }
+    p{
+      @apply text-grayishBlue
+    }
+  }
+
+.type1{
+  @apply md:text-left sm:text-center md:justify-center
+}  
+
+.button{
+  @apply  rounded-lg bg-softBlue text-white border border-softBlue shadow-md hover:bg-white hover:text-softBlue
+}

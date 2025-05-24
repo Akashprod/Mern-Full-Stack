@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width==[], initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <div id="header">
+
+        <div id="div1">
+            <img id="logo" src="https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-youtube-circle-512.png" alt="">
+        <h1 id="youtube">My Youtube</h1>
+        </div>
+
+        <div id="div2">
+            <input type="text" id="search" placeholder="type here...">
+            <button id="button" onclick="searchVideo()">Search</button>
+    
+        </div>
+    </div>
+
+    <div id="trending"></div>
+    
+
+
+    <div id="result"></div>
+</body>
+</html>
+
+<script>
+    let API_KEY = "AIzaSyB2PaxSRHjLQ8vDIUX-bF3utcAUhJCW4TI";
+
+    async function trending() {
+        let main = document.querySelector("#trending");
+        let response = await fetch(`https://www.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&regionCode=IN&maxResults=10&key=${API_KEY}`);
+
+        let data = await response.json();
+        append(data.items);
+    }
+
+trending();
+
+    let search_result = document.querySelector("#result");
+
+    async function searchVideo() {
+        try {
+            let query = document.querySelector("#search").value;
+
+            let response = await fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&q=${query}&type=video&maxResults=20&key=${API_KEY}`);
+
+            let data = await response.json();
+            // console.log(data);
+            append(data.items);
+            
+        } catch (error) {
+         console.log(error);   
+        }
+    }
+
+   function append(data){
+        search_result.innerHTML = "";
+
+        data.forEach((element)=>{
+
+        const {snippet,id:{videoId}} = element;
+
+        let url = snippet.thumbnails.medium.url;
+        let title = snippet.title;
+
+        let div = document.createElement("div");
+        div.id = "content";
+        let img = document.createElement("img");
+        img.id="image";
+        img.src = url;
+        let name = document.createElement("h4");
+        name.id="name";
+        name.innerText = title;
+        div.append(img,name);
+
+        img.style.cursor="pointer"
+
+        let data = {videoId:videoId,
+            snippet}
+
+        div.onclick=()=>{
+            showVideo(data);
+        }
+
+        search_result.append(div);
+        
+        })
+    }
+
+    function showVideo(data){
+        window.location.href="video.html";
+        localStorage.setItem("clicked_video",JSON.stringify(data));
+    }
+</script>

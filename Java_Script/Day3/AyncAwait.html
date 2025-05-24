@@ -1,0 +1,95 @@
+<!-- async syntax
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    async function f() {
+        // return 1;
+        // return Promise.resolve("success message");
+        return Promise.reject("error message");
+    }
+
+    f().then((result)=>alert(result)).catch((error)=>alert(error));
+</script> -->
+
+<!-- Async Await 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    hi
+</body>
+</html>
+
+<script>
+    async function f() {
+        try {
+            let resultPromise = new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                    resolve("Done");
+                },1000);
+            });
+
+            let result = await resultPromise;
+            alert(result);
+            console.log(result);
+            
+        } catch (error) {
+            alert("error");
+        }
+            }
+            f();
+</script> -->
+
+<!-- API and Fetching
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="container"></div>
+  </body>
+</html>
+<script>
+  async function dataFetching() {
+
+    try {
+      let response = await fetch("https://fakestoreapi.com/products");
+      // console.log(response);
+      let data = await response.json();
+      console.log(data);
+
+      let display = document.querySelector("#container");
+
+      data.map(function (element) {
+        let p = document.createElement("p");
+        p.innerText = element.title;
+        let image = document.createElement("img");
+        image.src = element.image;
+        display.append(p,image);
+      });
+    } 
+    catch (error) {
+      console.log(error);
+    }
+  }
+
+  dataFetching();
+</script> -->
+

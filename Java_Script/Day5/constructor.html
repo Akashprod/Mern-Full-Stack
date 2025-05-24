@@ -1,0 +1,121 @@
+<!-- Constructor :
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    hi
+</body>
+</html>
+
+<script>
+    function studentDetails(names,age,place){
+        
+        this.name = names;
+        this.personAge = age;
+        this.personLocation = place;
+        console.log("this is inside constr",this);
+        
+    }
+
+    student1 = new studentDetails("Akash",23,"kakinada");
+    console.log(student1);
+
+    student2 = new studentDetails("Siri",26,"Banglore");
+    console.log(student2);
+
+</script> -->
+
+<!-- Methods
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    hi
+
+</body>
+</html>
+
+<script>
+    function studentDetails(names,age,place){
+        
+        this.name = names;
+        this.personAge = age;
+        this.personLocation = place;
+        this.lastName = "K"
+        this.print = function(){
+            console.log(this.name+" "+this.personAge+" "+this.personLocation)
+        }
+        
+    }
+
+    student1 = new studentDetails("Akash",23,"kakinada");
+    console.log(student1);
+    // console.log(student1.print());
+
+    student2 = new studentDetails("Siri",26,"Banglore");
+    console.log(student2);
+    // console.log(student2.print());
+
+</script> -->
+
+<!-- Adding additional data to existing objects(call/apply/bind)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    hi
+
+</body>
+</html>
+
+<script>
+    function studentDetails(names,age,place){
+        
+        this.name = names;
+        this.personAge = age;
+        this.personLocation = place;
+        this.lastName = "K"
+        this.print = function(){
+            console.log(this.name+" "+this.personAge+" "+this.personLocation)
+        }
+        
+    }
+
+    function addProperties(state,language){
+        this.personSate = state;
+        this.personLanguage = language;
+    }
+
+    let student1 = new studentDetails("Akash",23,"kakinada");
+    console.log(student1);
+    addProperties.call(student1,"Andhra","Telugu");
+    console.log(student1);
+   
+
+    let student2 = new studentDetails("Siri",26,"Banglore");
+    console.log(student2);
+    addProperties.apply(student2,["Karnataka","Kannada"]);
+    console.log(student2);
+
+    let student3 = new studentDetails("Priya",24,"Puducherry");
+    console.log(student3);
+    let updatedStudent3 = addProperties.bind(student3,"Tamil Nadu","Tamil");
+    updatedStudent3();
+    console.log(student3);
+   
+
+</script> -->
+

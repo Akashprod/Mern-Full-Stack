@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .logoClass{
+            height: 100px;
+            width: 100px;
+        }
+        #container{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: repeat(auto);
+            gap: 20px;
+        }
+
+        #container>div{
+            border: 1px solid black;
+        }
+        .nameClass{
+            text-align: center;
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="container">
+
+    </div>
+</body>
+</html>
+
+<script>
+    var investors = [
+    {
+      id: 5,
+      name: "Ankush Sachdeva",
+      image:
+        "https://d27028dliefpk3.cloudfront.net/assets/our-investors/ankush-sachdeva-sharechat.jpg",
+      companyLogo:
+        "https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg",
+      role: "Co-Founder & CEO",
+    },
+    {
+      id: 6,
+      name: "Bhanu Pratap Singh",
+      image:
+        "https://d27028dliefpk3.cloudfront.net/assets/our-investors/bhanu-pratap-singh-sharechat.jpg",
+      companyLogo:
+        "https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg",
+      role: "Co-founder and CTO, ShareChat",
+    },
+    {
+      id: 7,
+      name: "Farid Ahsan",
+      image:
+        "https://d27028dliefpk3.cloudfront.net/assets/our-investors/farid-ahsan-sharechat.png",
+      companyLogo:
+        "https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg",
+      role: "Co-founder and COO, ShareChat",
+    },
+    {
+      id: 8,
+      name: "Prateek Shukla",
+      image:
+        "https://d27028dliefpk3.cloudfront.net/assets/masai-team/preeti.png",
+      companyLogo:
+        "https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg",
+      role: "Co-Founder & CEO",
+    },
+    
+    {
+      id: 1,
+      name: "Vijay Shekhar Sharma",
+      image:
+        "https://d27028dliefpk3.cloudfront.net/assets/masai-team/prateek.jpeg",
+      companyLogo:
+        "https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg",
+      role: "Co-Founder & CEO",
+    },
+    {
+      id: 2,
+      name: "Prateek Shukla",
+      image:
+        "https://d27028dliefpk3.cloudfront.net/assets/masai-team/yogesh.jpeg",
+      companyLogo:
+        "https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg",
+      role: "Co-Founder & CEO",
+    },
+    {
+      id: 3,
+      name: "Prateek Shukla",
+      image:
+        "https://d27028dliefpk3.cloudfront.net/assets/masai-team/nrupul.jpeg",
+      companyLogo:
+        "https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg",
+      role: "Co-Founder & CEO",
+    },
+    {
+      id: 4,
+      name: "Prateek Shukla",
+      image:
+        "https://d27028dliefpk3.cloudfront.net/assets/masai-team/ankur.jpeg",
+      companyLogo:
+        "https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg",
+      role: "Co-Founder & CEO",
+    },
+    {
+      id: 5,
+      name: "Prateek Shukla",
+      image:
+        "https://d27028dliefpk3.cloudfront.net/assets/masai-team/sumeet.png",
+      companyLogo:
+        "https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg",
+      role: "Co-Founder & CEO",
+    },
+    {
+      id: 6,
+      name: "Prateek Shukla",
+      image:
+        "https://d27028dliefpk3.cloudfront.net/assets/masai-team/keshav_misra.jpeg",
+      companyLogo:
+        "https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg",
+      role: "Co-Founder & CEO",
+    },
+    {
+      id: 7,
+      name: "Prateek Shukla",
+      image:
+        "https://d27028dliefpk3.cloudfront.net/assets/masai-team/sudhir_mor.jpeg",
+      companyLogo:
+        "https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg",
+      role: "Co-Founder & CEO",
+    },
+    {
+      id: 8,
+      name: "Prateek Shukla",
+      image:
+        "https://d27028dliefpk3.cloudfront.net/assets/masai-team/preeti.png",
+      companyLogo:
+        "https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg",
+      role: "Co-Founder & CEO",
+    },
+  ];
+
+  investors.map(function (element){
+
+    let name=document.createElement("h2");
+    name.innerText=element.name;
+    name.setAttribute("class","nameClass")
+
+    let image=document.createElement("img");
+    image.src=element.image;
+
+    let role=document.createElement("h4");
+    role.innerText=element.role;
+
+    let logo=document.createElement("img");
+    logo.src=element.companyLogo;
+    logo.setAttribute("class","logoClass")
+
+    let div=document.createElement("div");
+    div.append(name,image,role,logo);
+
+    document.querySelector("#container").append(div);
+
+
+  })
+
+</script>

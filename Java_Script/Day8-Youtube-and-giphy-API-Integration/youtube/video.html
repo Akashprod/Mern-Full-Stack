@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>This is your video</h1>
+    <div id="video_div"></div>
+</body>
+</html>
+
+<script>
+    function showClickedVideo() {
+        let video_data = JSON.parse(localStorage.getItem("clicked_video"));
+        let video_div = document.querySelector("#video_div");
+
+        let iframe = document.createElement("iframe");
+
+        iframe.src = src=`https://www.youtube.com/embed/${video_data.videoId}`;
+        iframe.width = "100%";
+        iframe.height = "1000px";
+        iframe.setAttribute("allowfullscreen",true);
+        video_div.append(iframe);
+
+    }
+
+    showClickedVideo();
+</script>

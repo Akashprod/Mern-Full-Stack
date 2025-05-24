@@ -1,0 +1,28 @@
+.card-title{
+    margin : 8px;
+    color : blue;
+    font-weight : 600;
+    padding : 8px;
+    cursor : pointer;
+    font-size : 20px;
+}
+
+.card-description{
+    margin : 8px;
+    padding : 8px;
+    cursor : pointer;
+}
+
+.card{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin : 15px;
+}
+
+.card-body{
+    
+    padding : 5px;
+    margin : 8px;
+    display : flex;
+    justify-content : center;
+    align-items : center;
+}

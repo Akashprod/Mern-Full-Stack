@@ -1,0 +1,84 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color:#99FFFF;
+  }
+  
+  /* Main container */
+  main {
+    text-align: center;
+  }
+  
+  /* Buttons */
+  button {
+    padding: 8px 12px;
+    margin: 10px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Hidden initially */
+    width: 250px;
+    height: 100%;
+    background: white;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    transition: left 0.3s ease;
+    padding: 20px;
+  }
+  
+  .show-sidebar {
+    left: 0;
+  }
+  
+  /* Modal */
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+  
+  .show-modal {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .modal-overlay button {
+    background: white;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color : red;
+  }
+  
+  .modal-overlay h3 {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  

@@ -1,0 +1,49 @@
+<!-- Set Interval
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>This is set Interval activity</h2>
+</body>
+</html>
+
+<script>
+    console.log(1);
+    setInterval(function(){
+        console.log(2)
+    },1000);
+    console.log(3);
+</script> -->
+
+<!-- Clear Interval
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1></h1>
+</body>
+</html>
+<script>
+    let i=0;
+    let id=setInterval(function(){
+        i++;
+        console.log(i);
+        document.querySelector("h1").innerText=i;
+        if(i==5){
+            clearInterval(id);
+            document.querySelector("h1").innerText="Timer Stopped";
+        }
+    },1000);
+</script> -->
+
+
+
+
